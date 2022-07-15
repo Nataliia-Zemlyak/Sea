@@ -50,7 +50,7 @@
         },
         vip: {
             src: "img/sms",
-            alt: "",
+            alt: "замовлення подорожі",
             in: "Особливе замовлення",
             price: "250",
             description: "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші.",
@@ -58,6 +58,55 @@
 
         }
     }
+
+- 
+    let props = {
+        one: {
+            src: "img/romantic",
+            alt: "Романтична подорож на острів",
+            info: "Романтична подорож на 2",
+            description: "Подорож у найромантичніші куточки світу, занурить вас у дивовижні пейзажі природи",
+            price: "2599",
+            href: "#"
+        },
+        two: {
+            src: "img/velo",
+            alt: "Велотур",
+            info: "Велотур",
+            description: "Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!",
+            price: "555",
+            href: "#"
+        },
+        three: {
+            src: "img/palma",
+            alt: "відпочинок на острові",
+            info: "На острові!",
+            description: "Хочеш зануритись у тишу, місце де не має натовпу, та панує дмка природа? Тоді вперед за пригодам",
+            price: "1559",
+            href: "#"
+        },
+        four: {
+            src: "img/serf",
+            alt: "катання на сьорфінгу",
+            info: "Катання на сьорфінгу",
+            description: "Хочеш отримати екстрим та мега вражень одночасно? Тоді вперед ловити хвилі!",
+            price: "999",
+            href: "#"
+        }
+    }
+
+
+
+mixin prop (item)
+    figure.prop
+        figcaption 
+            picture 
+                sourse(srcset=item.src + ".webp", type="image/webp")
+                img(src=item.src + ".png", alt=item.alt) 
+            p.info #{item.info}
+            p.prop-descr #{item.description}
+            p.prop-price #{item.price}<span> грн.</span>
+                a(href=item.href class="zakaz") замовити
 
 mixin card (item)
     figure.card

@@ -1,34 +1,25 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body 
-         section.one
-            .wrapper
-                .header
-                    .top.flex
-                        .logo.flex
-                            img(src='img/logo.png') 
-                            p trips 
-                        .hamburger 
-                            span 
-                            span 
-                            span
-                            
-                        nav.navmenu.flex
-                            ul.top-menu.flex#menu
-                                +menu(mainMenu)
+
+section.one
+    .wrapper
+        .header
+            .top.flex
+                .logo.flex
+                    img(src='img/logo.png') 
+                    p trips 
+                .hamburger 
+                    span 
+                    span 
+                    span
                     
-                    .title-header.wrapper
-                        h1 Морські пригоди
-                        p Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними! 
-                        .btn
-                            a(href="#" class="orange") детальніше
-                    .plan 
-                        h2 обери свій план подорожі
-                        p Наша фірма -лідер на ринку у своїй сфері
-                        .beff
-                            a(href="#" class="strilka")
+                nav.navmenu
+                    ul.top-menu.flex#menu
+                        +menu(mainMenu)
+            
+            .title-header.wrapper
+                h1 Морські пригоди
+                p Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними! 
+                a(href="#" class="orange") детальніше
+                h2 обери свій план подорожі
+                p.firm Наша фірма -лідер на ринку у своїй сфері
+                .beff
+                    a(href="#main" class="strilka")

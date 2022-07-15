@@ -1,21 +1,102 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body 
-        .main
-            section.about-company
-                .wrapper.flex
-                    .our-company 
-                        h2 про нашу компанію
-                        h3 Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
-                        .btn
-                            a(href="#" class="orange") детальніше
-                        p * - зверніть увагу, зміна ціни може залежати від курсу долара.
-                    .flex
-                        +card(cards.free)
-                        +card(cards.basic)
-                        +card(cards.vip)
+.main
+    section.about-company#main
+        .container.flex
+            .row
+                .our-company.col-xl-3.d-flex.flex-column.align-items-center.align-items-xl-start
+                    h2.text-uppercase.text-center.text-xl-start про нашу компанію
+                    h3.comp.d-inline-block.text-center.text-xl-start Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+                    a(href="#" class="orange") детальніше
+                    p.atention.lh-base.text-center.text-xl-start * - зверніть увагу, зміна ціни може залежати від курсу долара.
+                .col-xl-9
+                    .row
+                        .col-12.col-md-4.d-flex.justify-content-center
+                            +card(cards.free)
+                        .col-12.col-md-4.d-flex.justify-content-center
+                            +card(cards.basic)
+                        .col-12.col-md-4.d-flex.justify-content-center
+                            +card(cards.vip)
+                .row
+                    .col-xl-5.col
+                    .col-xl-2.col-12.text-center.look
+                        a.text-uppercase.allPlans.text-center.position-relative.d-inline-block(href="#") дивитись усі плани
+                    
+        hr.container
+
+    section
+        .container.d-flex.justify-content-between
+            .row
+                .ostriv.col-12.col-lg-4
+                    img(src='img/ostrivok.jpg')
+                .tai.col-12.col-lg-8
+                    h2.text-uppercase.text-left.text-lg-start Дивовижний безлюдний острів, який зводить людей з розуму
+                    .row
+                        .puh.col-12.col-lg-8
+                            p.d-block.text-center.text-xl-start Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
+                            .flex.flex-column.flex-sm-row.justify-content-center.justify-content-xl-start.but
+                                .btf
+                                    a(href="#" class="orange") замовити тур
+                                .btf
+                                    a(href="#" class="transparent") детальніше
+                        .money.col-12.col-xl-4.mx-auto
+                            p.text-center 575 грн./день 
+                            p.text-center.discr В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
+                
+    section.life
+        .container
+            .row
+                .hvulya.col-12.col-xl-6.text-center.text-xl-start
+                    h3 СПІЙМАЙ ХВИЛЮ 
+                    h3.text-primary ЖИВИ ЯСКРАВО!
+                    p Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
+                    a(href="#" class="orange") детальніше
+                .col-12.col-xl-6.text-center.text-xl-start.d-flex.justify-content-center
+                    .description.position-relative.d-flex.justify-content-center.flex-column.align-items-center
+                        span
+                        p.text-start Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
+                        p.oleg Олег Набережний
+                        p.client.text-secondary клієнт
+                        img(src='img/oleg 2.png')
+    section.proposition
+        .container
+            .row
+                h3.text-center Спеціальні пропозиції тижня
+                p.hot.text-center Гарячі праозиції, по-швидше обирай і поїхали!
+                .col-12.d-flex.justify-content-center.col-lg-6.col-xl-3
+                    +prop(props.one)
+                .col-12.d-flex.justify-content-center.col-lg-6.col-xl-3
+                    +prop(props.two)
+                .col-12.d-flex.justify-content-center.col-lg-6.col-xl-3
+                    +prop(props.three)
+                .col-12.d-flex.justify-content-center.col-lg-6.col-xl-3
+                    +prop(props.four)
+            hr
+    section.infodot.container 
+        .row 
+            .col-12.col-xl-3
+                h2 додаткова інформація
+            .col-lg-6.col-xl-3
+                figure.grafik
+                    figcaption
+                        p.infofood Графік роботи готелів.xls
+                        p.size Розмір файла: 10Mb
+                        p.ctor Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.
+                        .button 
+                            a.ora(href="#") скачати
+            .col-lg-6.col-xl-3
+                figure.graf
+                    figcaption
+                        p.infofood Інформація про харчування.xls
+                        p.size Розмір файла: 10Mb
+                        p.ctor У будь-якому нашому турі включені сніданки у вартість. Якщо ж бажаєте замовити додотково, то ознайомтесь з умовами.
+                        .button 
+                            a.ora(href="#") скачати
+                
+            .col-12.col-xl-3.anna.text-center
+                h4 задати питання
+                p Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
+                a(href="#" class="tel") +38 (050) 56 98 511
+                h5 Анна Миколаївна
+                p.client консультант
+                img(src='img/anna2.png')
+
+
