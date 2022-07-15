@@ -387,13 +387,31 @@
         border: 2rem solid #ffb700
         text-decoration: none
 .anna 
-    text-align: center
+    position: relative
+    font-size: 18px
+    &::before,
+    &::after
+        position: absolute
+        height: 80%
+        width: 47px
+        top: 0px
+        border: 4px solid #ffb700
+        +media(600)
+            content: ""
+    &::before
+        top: 4rem
+        right: 10px
+        border-left: none
+    &::after
+        left: 10px
+        border-right: none
     h4 
         font-size: 18rem
         letter-spacing: 1rem
         color: #333333
         font-weight: 400
     p 
+        padding: 15rem 25rem
         font-size: 13rem
         color: #999999
         font-weight: 400
