@@ -30,8 +30,8 @@
                 .tai.col-12.col-lg-8
                     h2.text-uppercase.text-left.text-lg-start Дивовижний безлюдний острів, який зводить людей з розуму
                     .row
-                        .puh.col-12.col-lg-8
-                            p.d-block.text-center.text-xl-start Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
+                        .puh.col-12.col-xl-8
+                            p.d-block.text-xl-start.text-left Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
                             .flex.flex-column.flex-sm-row.justify-content-center.justify-content-xl-start.but
                                 .btf
                                     a(href="#" class="orange") замовити тур
@@ -46,7 +46,7 @@
             .row
                 .hvulya.col-12.col-xl-6.text-center.text-xl-start
                     h3 СПІЙМАЙ ХВИЛЮ 
-                    h3.text-primary ЖИВИ ЯСКРАВО!
+                    h3.primary ЖИВИ ЯСКРАВО!
                     p Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
                     a(href="#" class="orange") детальніше
                 .col-12.col-xl-6.text-center.text-xl-start.d-flex.justify-content-center
@@ -64,7 +64,8 @@
                 .col-12.d-flex.justify-content-center.col-md-6.col-xl-3
                     +prop(props.one)
                 .col-12.d-flex.justify-content-center.col-md-6.col-xl-3
-                    +prop(props.two)
+                    .bike
+                        +prop(props.two)
                 .col-12.d-flex.justify-content-center.col-md-6.col-xl-3
                     +prop(props.three)
                 .col-12.d-flex.justify-content-center.col-md-6.col-xl-3
@@ -75,21 +76,23 @@
             .col-12.col-xl-3
                 h2 додаткова інформація
             .col-lg-6.col-xl-3
-                figure.grafik
-                    figcaption
-                        p.infofood Графік роботи готелів.xls
-                        p.size Розмір файла: 10Mb
-                        p.ctor Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.
-                        .button 
-                            a.ora(href="#") скачати
+                .graffik
+                    figure.grafik
+                        figcaption
+                            p.infofood Графік роботи готелів.xls
+                            p.size Розмір файла: 10Mb
+                            p.ctor Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.
+                            .button 
+                                a.ora(href="#") скачати
             .col-lg-6.col-xl-3
-                figure.graf
-                    figcaption
-                        p.infofood Інформація про харчування.xls
-                        p.size Розмір файла: 10Mb
-                        p.ctor У будь-якому нашому турі включені сніданки у вартість. Якщо ж бажаєте замовити додотково, то ознайомтесь з умовами.
-                        .button 
-                            a.ora(href="#") скачати
+                .graffik
+                    figure.graf
+                        figcaption
+                            p.infofood Інформація про харчування.xls
+                            p.size Розмір файла: 10Mb
+                            p.ctor У будь-якому нашому турі включені сніданки у вартість. Якщо ж бажаєте замовити додотково, то ознайомтесь з умовами.
+                            .button 
+                                a.ora(href="#") скачати
                 
             .col-12.col-xl-3.anna.text-center
                 h4 задати питання

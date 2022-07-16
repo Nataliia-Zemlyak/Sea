@@ -1,6 +1,6 @@
 =btn ($color) 
     display: inline-block
-    padding: 13rem 50rem
+    padding: 12rem 28rem
     border-radius: 23rem
     text-decoration: none
     text-transform: uppercase 
@@ -15,7 +15,10 @@
         font-family: "Rubik"
         text-align: center
         &:hover 
-            transform: scale(1.1)
+            background-color: #0099ff
+            color: #fff
+
+            
             
     @else if $color == "transparent" 
         background-color: rgba(0,153,255,0)
@@ -27,7 +30,8 @@
         font-family: "Rubik"
         text-align: center
         &:hover 
-            transform: scale(1.1)
+            background-color: #0099ff
+            color: #fff
 
     
 =media ($size)

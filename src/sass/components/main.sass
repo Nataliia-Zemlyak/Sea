@@ -31,6 +31,13 @@
     &:hover 
         filter: drop-shadow(0rem 4rem 10.5rem rgba(3,20,31,0.05))
         background-color: #ffffff
+    &:hover::before 
+        opacity: 1
+        content: url(../img/zirochka.png)
+        position: absolute
+        top: 0
+        left: 0 
+        z-index: 2
     
 .price 
     font-size: 24rem
@@ -60,8 +67,11 @@
     font-size: 12px
     letter-spacing: 0px
     color: #0099ff
+    transition: all .3s ease
     &:hover
         color: #ffb700
+        transform: scale(1.2)
+
     &::after,
     &::before
         content: ""
@@ -90,15 +100,18 @@
 .ostriv 
     img
         width: 100%
+        
 
 .tai
     h2
-        padding: 0 20rem
+        padding: 13rem 20rem
         text-transform: uppercase
         font-size: 36rem
         color: #333333
         font-weight: 400
-        font-family: "Rubik"
+        font-family: "Rubik" 
+        +media(992)
+            padding: 0 20rem
     p 
         font-size: 16rem
         line-height: 24rem
@@ -161,6 +174,8 @@
         line-height: 66rem
         color: #ffffff
         font-weight: 400
+    .primary
+        color: #0099ff
     p 
         margin-top: 30rem
         margin-bottom: 30rem
@@ -195,7 +210,7 @@
         +media(600)
             content: ""
     &::before
-        right: -35px
+        right: -25px
         border-left: none
     &::after
         left: -35px
@@ -245,8 +260,8 @@
         font-style: italic
 
 .prop 
+    position: relative
     margin: 30rem 8rem
-    padding: 8rem 0
     width: 270rem 
     border: none
     background-color: #f5f8fa
@@ -254,14 +269,69 @@
         filter: drop-shadow(0rem 4rem 10.5rem rgba(3,20,31,0.05))
         background-color: #ffffff
     a 
+        position: relative
         text-transform: uppercase
         text-decoration: none
         padding-left: 40rem
         font-size: 13rem
         letter-spacing: 1rem
         color: #ffb700
-        font-weight: 400
-    
+        font-weight: 400 
+        transition: all .3s ease
+        &:hover 
+            color: #0099ff
+        &::before
+            content: ""
+            position: absolute 
+            width: 11px
+            height: 11px
+            right: -25px
+            top: 2px
+            border: 1px solid 
+            border-radius: 50%
+        &::after
+            content: ""
+            position: absolute 
+            width: 4px
+            height: 4px
+            right: -20px
+            top: 5px
+            border-bottom: 1px solid 
+            border-right: 1px solid 
+            transform: rotate(313deg)
+    &:hover::before 
+        content: url(../img/zirochka.png)
+        position: absolute
+        top: 0
+        left: 0 
+        opacity: 1
+        z-index: 2
+.bike
+    transition: .3s all linear
+    position: relative
+    &:hover::after
+        opacity: 1
+        content: url(../img/bike.png)
+        position: absolute
+        top: 30px
+        left: 8px
+        z-index: 1
+    &:hover::before 
+        opacity: 1
+        transition: .3s all linear
+        content: url(../img/zirochka.png) 
+        position: absolute
+        top: 30px
+        left: 8px
+        z-index: 2
+            
+        
+
+
+
+
+
+
 .prop-price 
     padding: 10rem
     font-size: 24rem
@@ -286,11 +356,15 @@
 
 .infodot 
     h2 
+        margin-top: 10rem
+        padding: 0 20rem
         text-transform: uppercase
         font-size: 36rem
         letter-spacing: 1rem
         color: #333333
         font-weight: 400
+.graffik 
+    margin-top: 10rem
 .grafik
     margin: 0 20rem
     background: url(../img/house.png) no-repeat
@@ -300,7 +374,7 @@
     margin-bottom: 20rem 
     .infofood
         position: relative
-        padding: 38rem 56rem 0
+        padding: 38rem 80rem 0
         font-size: 18rem
         color: #ffffff
         font-weight: 400
@@ -311,10 +385,10 @@
             width: 34rem
             height: 43rem
             top: 43rem
-            left: 13rem
+            left: 30rem
             background: url(../img/konvert.png)
     .size
-        padding: 0 56rem
+        padding: 0 80rem
         font-size: 13rem
         color: #bbbbbb
         font-weight: 400
@@ -327,6 +401,7 @@
         font-weight: 400
         font-family: "Rubik"
     .ora
+        position: relative
         margin: 0 30rem 15rem
         display: inline-block
         padding: 8rem 30rem
@@ -340,6 +415,19 @@
         background-color: rgba(255,183,0,0)
         border: 2rem solid #ffb700
         text-decoration: none
+        &:hover 
+            background-color: rgba(0,0,0,.3)
+            color: #ffffff 
+        &::before 
+            content: ""
+            position: absolute
+            width: 15px
+            height: 11px
+            top: 17px
+            left: 9px
+            transform: translateY(-50%)
+            background: url(../img/khmara.png) no-repeat center
+
 .graf
     margin: 0 20rem
     background: url(../img/restoran.png) no-repeat
@@ -347,7 +435,7 @@
     background-position: bottom center
     .infofood
         position: relative
-        padding: 36rem 56rem 0
+        padding: 36rem 77rem 0
         font-size: 18rem
         color: #ffffff
         font-weight: 400
@@ -358,10 +446,10 @@
             width: 34rem
             height: 43rem
             top: 43rem
-            left: 13rem
-            background: url(../img/konvert.png)
+            left: 30rem
+            background: url(../img/konvert.png) no-repeat
     .size
-        padding: 0 56rem
+        padding: 0 77rem
         font-size: 13rem
         color: #bbbbbb
         font-weight: 400
@@ -373,6 +461,7 @@
         font-weight: 400
         font-family: "Rubik"
     .ora
+        position: relative
         display: inline-block
         margin: 0 30rem 15rem
         padding: 8rem 29rem
@@ -385,10 +474,25 @@
         border-radius: 16rem
         background-color: rgba(255,183,0,0)
         border: 2rem solid #ffb700
-        text-decoration: none
+        text-decoration: none 
+        &:hover 
+            background-color: rgba(0,0,0,.3)
+            color: #ffffff 
+        &::before 
+            content: ""
+            position: absolute
+            width: 15px
+            height: 11px
+            top: 17px
+            left: 9px
+            transform: translateY(-50%)
+            background: url(../img/khmara.png) no-repeat center
 .anna 
+    margin: 13rem 0
     position: relative
     font-size: 18px
+    +media(1200)
+        margin: 0
     &::before,
     &::after
         position: absolute
@@ -399,11 +503,12 @@
         +media(600)
             content: ""
     &::before
-        top: 4rem
-        right: 10px
+        top: 10rem
+        right: 20px
         border-left: none
     &::after
-        left: 10px
+        top: 11rem
+        left: 20px
         border-right: none
     h4 
         font-size: 18rem
@@ -411,14 +516,26 @@
         color: #333333
         font-weight: 400
     p 
-        padding: 15rem 25rem
+        padding: 20rem 50rem
         font-size: 13rem
         color: #999999
         font-weight: 400
     a 
+        position: relative
         font-size: 18rem
         color: #0099ff
-        font-weight: 400
+        font-weight: 400  
+        transition: all .3s ease
+        &:hover 
+            color: #ffb700
+        &::before 
+            content: ""
+            position: absolute
+            width: 16px
+            height: 17px
+            top: 2px
+            left: -21px
+            background: url(../img/call.svg) no-repeat center
     h5 
         font-size: 18rem
         color: #333333
