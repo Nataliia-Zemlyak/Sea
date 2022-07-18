@@ -197,6 +197,7 @@
         margin-top: 100rem
         margin-left: 136rem
     p 
+        padding: 0 10rem
         font-size: 16rem
         color: #ffffff
         font-weight: 400
@@ -269,22 +270,50 @@
 .prop 
     position: relative
     margin: 30rem 8rem
-    width: 270rem 
     border: none
-    background-color: #f5f8fa
+    background-color: #f5f8fa 
+    +media(1200)
+        width: 270rem
+    img 
+        width: 100%
+        height: 100%
+
+
     &:hover 
         filter: drop-shadow(0rem 4rem 10.5rem rgba(3,20,31,0.05))
         background-color: #ffffff
     a 
         position: relative
+        padding-right: 25rem
+        padding-top: 10rem
         text-transform: uppercase
         text-decoration: none
-        padding-left: 40rem
         font-size: 13rem
         letter-spacing: 1rem
         color: #ffb700
         font-weight: 400 
-        transition: all .3s ease
+        transition: all .3s ease 
+        &::before
+            content: ""
+            position: absolute 
+            width: 11px
+            height: 11px
+            right: 8px
+            top: 14px
+            border: 1px solid 
+            border-radius: 50%
+        &::after
+            content: ""
+            position: absolute 
+            width: 4px
+            height: 4px
+            right: 12px
+            top: 18px
+            border-bottom: 1px solid 
+            border-right: 1px solid 
+            transform: rotate(313deg)
+        &:hover 
+            color: #0099ff
     &:hover::before 
         content: url(../img/zirochka.png)
         position: absolute
@@ -292,32 +321,11 @@
         left: 0 
         opacity: 1
         z-index: 2
+.price-pad 
+    padding: 20rem
     
-.zakaz
-    position: relative
-    &::before
-        content: ""
-        position: absolute 
-        width: 11px
-        height: 11px
-        right: -25px
-        top: 2px
-        border: 1px solid 
-        border-radius: 50%
-        
-    &::after
-        content: ""
-        position: absolute 
-        width: 4px
-        height: 4px
-        right: -20px
-        top: 6px
-        border-bottom: 1px solid 
-        border-right: 1px solid 
-        transform: rotate(313deg)
+
     
-    &:hover 
-        color: #0099ff
     
 .bike
     transition: .3s all linear
@@ -326,7 +334,7 @@
         opacity: 1
         content: url(../img/bike.png)
         position: absolute
-        top: 30px
+        top: 0
         left: 8px
         z-index: 1
     &:hover::before 
@@ -334,19 +342,15 @@
         transition: .3s all linear
         content: url(../img/zirochka.png) 
         position: absolute
-        top: 30px
+        top: 0
         left: 8px
         z-index: 2
             
         
 
-
-
-
-
-
 .prop-price 
-    padding: 10rem
+    display: flex
+    justify-content: space-between
     font-size: 24rem
     color: #0099ff
     font-weight: 400
@@ -354,14 +358,13 @@
     
     
 .prop-descr
-    
-    padding: 8rem 10rem
+    margin: 16rem 0
     font-size: 13rem
     color: #999999
+    min-height: 59rem
     font-weight: 400
 
 .info 
-    padding: 10rem
     font-size: 18rem
     color: #333333
     font-weight: 400

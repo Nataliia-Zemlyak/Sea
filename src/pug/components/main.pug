@@ -56,19 +56,19 @@
                         p.oleg Олег Набережний
                         p.client.text-secondary клієнт
                         img(src='img/oleg 2.png')
-    section.proposition
+    section.proposition.container-fluid
         .container
-            .row
+            .row.g-5
                 h3.text-center Спеціальні пропозиції тижня
                 p.hot.text-center Гарячі праозиції, по-швидше обирай і поїхали!
-                .d-flex.justify-content-center.col-lg-6.col-xl-3.col-md-6
+                .col-12.col-xl-3.col-md-6
                     +prop(props.one)
-                .d-flex.justify-content-center.col-lg-6.col-xl-3.col-md-6
+                .col-12.col-xl-3.col-md-6
                     .bike
                         +prop(props.two)
-                .d-flex.justify-content-center.col-lg-6.col-xl-3.col-md-6
+                .col-12.col-xl-3.col-md-6
                     +prop(props.three)
-                .d-flex.justify-content-center.col-lg-6.col-xl-3.col-md-6
+                .col-12.col-xl-3.col-md-6
                     +prop(props.four)
             hr
     section.infodot.container 

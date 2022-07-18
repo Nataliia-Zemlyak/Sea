@@ -66,7 +66,7 @@
             alt: "Романтична подорож на острів",
             info: "Романтична подорож на 2",
             description: "Подорож у найромантичніші куточки світу, занурить вас у дивовижні пейзажі природи",
-            price: "2599",
+            price: "2599 грн",
             href: "#"
         },
         two: {
@@ -74,7 +74,7 @@
             alt: "Велотур",
             info: "Велотур",
             description: "Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!",
-            price: "555",
+            price: "555 грн",
             href: "#"
         },
         three: {
@@ -82,7 +82,7 @@
             alt: "відпочинок на острові",
             info: "На острови!",
             description: "Хочеш зануритись у тишу, місце де не має натовпу, та панує дмка природа? Тоді вперед за пригодам",
-            price: "1559",
+            price: "1559 грн",
             href: "#"
         },
         four: {
@@ -90,7 +90,7 @@
             alt: "катання на сьорфінгу",
             info: "Катання на сьорфінгу",
             description: "Хочеш отримати екстрим та мега вражень одночасно? Тоді вперед ловити хвилі!",
-            price: "999",
+            price: "999 грн",
             href: "#"
         }
     }
@@ -103,10 +103,11 @@ mixin prop (item)
             picture 
                 sourse(srcset=item.src + ".webp", type="image/webp")
                 img(src=item.src + ".png", alt=item.alt) 
-            p.info #{item.info}
-            p.prop-descr #{item.description}
-            p.prop-price #{item.price}<span> грн.</span>
-                a(href=item.href class="zakaz") замовити
+            .price-pad
+                p.info #{item.info}
+                p.prop-descr #{item.description}
+                p.prop-price.d-flex.justify-content-between #{item.price}
+                    a.card-btn(href=item.href class="zakaz") замовити
 
 mixin card (item)
     figure.card
